@@ -55,7 +55,11 @@ class FormWidget(QWidget):
 
     def __init__(self,parent):
       super(FormWidget, self).__init__(parent)
-      self.setFixedSize(640, 480)
+      self.step = 0
+      self._width = 640
+      self._height = 480
+      
+      self.setMinimumSize(self._width, self._height)
       self.initUI()
     
     def changeTitle(self,state):
@@ -95,7 +99,6 @@ class FormWidget(QWidget):
         sample_img_frame_list = []
         for _ in range(0,9):
             sample_img = QFrame()
-            sample_img.resize(25,25)
             sample_img.setStyleSheet("background-color: rgb(200, 255, 255)")
             sample_img.setFrameShape(QFrame.Box)
             sample_img.setFrameShadow(QFrame.Plain)
@@ -115,33 +118,60 @@ class FormWidget(QWidget):
         # Insert button
         # Load button
         # Save Button
+        
+        refresh_btn = QPushButton('Refresh', self)
+        fill_btn = QPushButton('Fill', self)
+        select_btn = QPushButton('Select', self)
+        load_btn = QPushButton('Load', self)
+        save_btn = QPushButton('Save', self)
 
-        '''
         midleft = QFrame()
-        midleft.resize(25,25)
         midleft.setFrameShape(QFrame.StyledPanel)
 
         midright = QFrame()
-        midright.resize(25,25)
         midright.setFrameShape(QFrame.Panel)
         
         bottom = QFrame()
         bottom.setFrameShape(QFrame.WinPanel)
         bottom.setFrameShadow(QFrame.Sunken)
 
-        splitter1 = QSplitter(Qt.Horizontal)
-        splitter1.addWidget(midleft)
-        splitter1.addWidget(midright)
-        '''
         #splitter = QSplitter(Qt.Vertical)
         #splitter = QSplitter(Qt.Horizontal)
-        splitter = QSplitter(Qt.Horizontal)
+        top_splitter = QSplitter(Qt.Horizontal)
         for sample_img in sample_img_frame_list:
-            splitter.addWidget(sample_img)
+            top_splitter.addWidget(sample_img)
+        top_splitter.addWidget(refresh_btn)
+        top_splitter.resize(self._width,20)
+        
+        img_button_splitter = QSplitter(Qt.Vertical)
+        img_button_splitter.addWidget(fill_btn)
+        img_button_splitter.addWidget(select_btn)
+        img_button_splitter.resize(50,30)
+
+        io_button_splitter = QSplitter(Qt.Vertical)
+        io_button_splitter.addWidget(load_btn)
+        io_button_splitter.addWidget(save_btn)
+        io_button_splitter.resize(50,30)
+
+        mid_splitter = QSplitter(Qt.Horizontal)
+        mid_splitter.addWidget(midleft)
+        mid_splitter.addWidget(midright)
+        mid_splitter.addWidget(img_button_splitter)
+        mid_splitter.resize(self._width,50)
+
+        bottom_splitter = QSplitter(Qt.Horizontal)
+        bottom_splitter.addWidget(bottom)
+        bottom_splitter.addWidget(io_button_splitter)
+        bottom_splitter.resize(self._width,50)      
+
+        layout_splitter = QSplitter(Qt.Vertical)
+        layout_splitter.addWidget(top_splitter)
+        layout_splitter.addWidget(mid_splitter)
+        layout_splitter.addWidget(bottom_splitter)
         
         plot_grid = QGridLayout()
         self.setLayout(plot_grid)
-        plot_grid.addWidget(splitter)
+        plot_grid.addWidget(layout_splitter)
 
         '''
         # combobox - selected menu
@@ -167,7 +197,6 @@ class FormWidget(QWidget):
 
         self.timer = QBasicTimer()
         self.step = 0
-        
         
         # push button
         btn = QPushButton('Button', self)
