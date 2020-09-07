@@ -92,15 +92,39 @@ class FormWidget(QWidget):
         self.setToolTip('This is a <b>QWidget</b> widget')
     
         # Splitter
-        top = QFrame()
-        top.setFrameShape(QFrame.Box)
+        sample_img_frame_list = []
+        for _ in range(0,9):
+            sample_img = QFrame()
+            sample_img.resize(25,25)
+            sample_img.setStyleSheet("background-color: rgb(200, 255, 255)")
+            sample_img.setFrameShape(QFrame.Box)
+            sample_img.setFrameShadow(QFrame.Plain)
 
+            #sample_img.setFrameShape(QFrame.StyledPanel)
+            #sample_img.setFrameShape(QFrame.Panel)
+            #sample_img.setFrameShape(QFrame.WinPanel)
+            sample_img_frame_list.append(sample_img)
+
+        selected_img = QFrame()
+        parameter = QFrame()
+
+        save_img=QFrame()
+
+        # Refresh button
+        # Fill button
+        # Insert button
+        # Load button
+        # Save Button
+
+        '''
         midleft = QFrame()
+        midleft.resize(25,25)
         midleft.setFrameShape(QFrame.StyledPanel)
 
         midright = QFrame()
+        midright.resize(25,25)
         midright.setFrameShape(QFrame.Panel)
-
+        
         bottom = QFrame()
         bottom.setFrameShape(QFrame.WinPanel)
         bottom.setFrameShadow(QFrame.Sunken)
@@ -108,15 +132,17 @@ class FormWidget(QWidget):
         splitter1 = QSplitter(Qt.Horizontal)
         splitter1.addWidget(midleft)
         splitter1.addWidget(midright)
-
-        splitter2 = QSplitter(Qt.Vertical)
-        splitter2.addWidget(top)
-        splitter2.addWidget(splitter1)
-        splitter2.addWidget(bottom)
+        '''
+        #splitter = QSplitter(Qt.Vertical)
+        #splitter = QSplitter(Qt.Horizontal)
+        splitter = QSplitter(Qt.Horizontal)
+        for sample_img in sample_img_frame_list:
+            splitter.addWidget(sample_img)
         
         plot_grid = QGridLayout()
         self.setLayout(plot_grid)
-        plot_grid.addWidget(splitter2)
+        plot_grid.addWidget(splitter)
+
         '''
         # combobox - selected menu
         self.lbl = QLabel('Option1', self)
@@ -141,7 +167,7 @@ class FormWidget(QWidget):
 
         self.timer = QBasicTimer()
         self.step = 0
-
+        
         
         # push button
         btn = QPushButton('Button', self)
