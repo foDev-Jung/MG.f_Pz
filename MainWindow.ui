@@ -6,18 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>612</height>
+    <width>768</width>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Puzzle Map Generater</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="refresh">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>670</x>
       <y>50</y>
       <width>75</width>
       <height>51</height>
@@ -30,8 +30,8 @@
    <widget class="QPushButton" name="load">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>390</y>
+      <x>660</x>
+      <y>400</y>
       <width>75</width>
       <height>41</height>
      </rect>
@@ -43,7 +43,7 @@
    <widget class="QPushButton" name="save">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>660</x>
       <y>450</y>
       <width>75</width>
       <height>41</height>
@@ -59,7 +59,7 @@
       <x>0</x>
       <y>10</y>
       <width>641</width>
-      <height>561</height>
+      <height>641</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -89,7 +89,7 @@
           <x>0</x>
           <y>0</y>
           <width>681</width>
-          <height>131</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -110,7 +110,7 @@
            <x>0</x>
            <y>0</y>
            <width>72</width>
-           <height>131</height>
+           <height>120</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -126,7 +126,7 @@
            <x>70</x>
            <y>0</y>
            <width>72</width>
-           <height>131</height>
+           <height>120</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -142,7 +142,7 @@
            <x>140</x>
            <y>0</y>
            <width>72</width>
-           <height>131</height>
+           <height>120</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -158,7 +158,7 @@
            <x>210</x>
            <y>0</y>
            <width>72</width>
-           <height>131</height>
+           <height>120</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -174,7 +174,7 @@
            <x>280</x>
            <y>0</y>
            <width>72</width>
-           <height>131</height>
+           <height>120</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -190,7 +190,7 @@
            <x>350</x>
            <y>0</y>
            <width>72</width>
-           <height>131</height>
+           <height>120</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -206,7 +206,7 @@
            <x>420</x>
            <y>0</y>
            <width>72</width>
-           <height>131</height>
+           <height>120</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -222,7 +222,7 @@
            <x>490</x>
            <y>0</y>
            <width>72</width>
-           <height>131</height>
+           <height>120</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -238,7 +238,7 @@
            <x>560</x>
            <y>0</y>
            <width>72</width>
-           <height>131</height>
+           <height>120</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -253,7 +253,7 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>140</y>
+          <y>130</y>
           <width>171</width>
           <height>171</height>
          </rect>
@@ -280,7 +280,7 @@
           </rect>
          </property>
          <property name="text">
-          <string>Selected Img</string>
+          <string>selected_img</string>
          </property>
         </widget>
        </widget>
@@ -288,16 +288,16 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>320</y>
+          <y>400</y>
           <width>631</width>
           <height>231</height>
          </rect>
         </property>
         <property name="frameShape">
-         <enum>QFrame::WinPanel</enum>
+         <enum>QFrame::Box</enum>
         </property>
         <property name="frameShadow">
-         <enum>QFrame::Sunken</enum>
+         <enum>QFrame::Plain</enum>
         </property>
         <property name="lineWidth">
          <number>2</number>
@@ -741,8 +741,8 @@
        <widget class="QPushButton" name="extract">
         <property name="geometry">
          <rect>
-          <x>500</x>
-          <y>150</y>
+          <x>40</x>
+          <y>310</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -754,8 +754,8 @@
        <widget class="QPushButton" name="insert">
         <property name="geometry">
          <rect>
-          <x>500</x>
-          <y>190</y>
+          <x>540</x>
+          <y>350</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -767,8 +767,8 @@
        <widget class="QPushButton" name="fill">
         <property name="geometry">
          <rect>
-          <x>500</x>
-          <y>240</y>
+          <x>540</x>
+          <y>320</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -781,9 +781,9 @@
         <property name="geometry">
          <rect>
           <x>180</x>
-          <y>140</y>
-          <width>271</width>
-          <height>171</height>
+          <y>130</y>
+          <width>351</width>
+          <height>261</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -798,16 +798,196 @@
         <property name="midLineWidth">
          <number>2</number>
         </property>
-        <widget class="QTextEdit" name="param_1">
+        <widget class="QFrame" name="parameter_1">
          <property name="geometry">
           <rect>
-           <x>80</x>
-           <y>20</y>
-           <width>181</width>
-           <height>16</height>
+           <x>10</x>
+           <y>10</y>
+           <width>331</width>
+           <height>41</height>
           </rect>
          </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QCheckBox" name="checkBox_1">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>0</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>제한없음</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_1">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>10</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_1">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>10</y>
+            <width>25</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>img</string>
+          </property>
+         </widget>
         </widget>
+        <widget class="QFrame" name="parameter_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>331</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QCheckBox" name="checkBox_2">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>0</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>제한없음</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>10</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>10</y>
+            <width>25</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>img</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="parameter_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>331</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QCheckBox" name="checkBox_3">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>0</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>제한없음</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>10</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>10</y>
+            <width>25</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>img</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="un_extract">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>340</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Un-Extract</string>
+        </property>
        </widget>
       </widget>
      </item>
@@ -819,7 +999,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>768</width>
      <height>21</height>
     </rect>
    </property>
