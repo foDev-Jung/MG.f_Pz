@@ -1,105 +1,62 @@
-import sip
-sip.setapi('QString', 2)
+import sys
 
-from PyQt4 import QtCore, QtGui
+from PyQt5.QtWidgets import QApplication, QLabel, QWidget
+from PyQt5.QtGui import QDrag, QPixmap, QPainter, QCursor
+from PyQt5.QtCore import QMimeData, Qt
 
 
-myMimeType = 'application/MyWindow'
-
-class MyLabel(QtGui.QLabel):
-    def __init__(self, parent):
-        super(MyLabel, self).__init__(parent)
-
-        self.setStyleSheet("""
-            background-color: black;
-            color: white;
-            font: bold;
-            padding: 6px;
-            border-width: 2px;
-            border-style: solid;
-            border-radius: 16px;
-            border-color: white;
-        """)
-
+class DraggableLabel(QLabel):
     def mousePressEvent(self, event):
-        itemData   = QtCore.QByteArray()
-        dataStream = QtCore.QDataStream(itemData, QtCore.QIODevice.WriteOnly)
-        dataStream.writeString(self.text())
-        dataStream << QtCore.QPoint(event.pos() - self.rect().topLeft())
+        if event.button() == Qt.LeftButton:
+            self.drag_start_position = event.pos()
 
-        mimeData = QtCore.QMimeData()
-        mimeData.setData(myMimeType, itemData)
-        mimeData.setText(self.text())
+    def mouseMoveEvent(self, event):
+        if not (event.buttons() & Qt.LeftButton):
+            return
+        if (event.pos() - self.drag_start_position).manhattanLength() < QApplication.startDragDistance():
+            return
+        drag = QDrag(self)
+        mimedata = QMimeData()
+        mimedata.setText(self.text())
+        drag.setMimeData(mimedata)
+        pixmap = QPixmap(self.size())
+        painter = QPainter(pixmap)
+        painter.drawPixmap(self.rect(), self.grab())
+        painter.end()
+        drag.setPixmap(pixmap)
+        drag.setHotSpot(event.pos())
+        drag.exec_(Qt.CopyAction | Qt.MoveAction)
 
-        drag = QtGui.QDrag(self)
-        drag.setMimeData(mimeData)
-        drag.setHotSpot(event.pos() - self.rect().topLeft())
-
-        self.hide()
-
-        if drag.exec_(QtCore.Qt.MoveAction | QtCore.Qt.CopyAction, QtCore.Qt.CopyAction) == QtCore.Qt.MoveAction:
-            self.close()
-
-        else:
-            self.show()
-
-
-class MyFrame(QtGui.QFrame):
-    def __init__(self, parent=None):
-        super(MyFrame, self).__init__(parent)
-
-        self.setStyleSheet("""
-            background-color: lightgray;
-            border-width: 2px;
-            border-style: solid;
-            border-color: black;
-            margin: 2px;
-        """)
-
-        y = 6
-        for labelNumber in range(6):
-            label = MyLabel(self)
-            label.setText("Label #{0}".format(labelNumber))
-            label.move(6, y)
-            label.show()
-
-            y += label.height() + 2
-
+class DropLabel(QLabel):
+    def __init__(self, *args, **kwargs):
+        QLabel.__init__(self, *args, **kwargs)
         self.setAcceptDrops(True)
 
     def dragEnterEvent(self, event):
-        if event.mimeData().hasFormat(myMimeType):
-            if event.source() in self.children():
-                event.setDropAction(QtCore.Qt.MoveAction)
-                event.accept()
-
-            else:
-                event.acceptProposedAction()
-
-        else:
-            event.ignore()
+        if event.mimeData().hasText():
+            event.acceptProposedAction()
 
     def dropEvent(self, event):
-        if event.mimeData().hasFormat(myMimeType):
-            mime       = event.mimeData()
-            itemData   = mime.data(myMimeType)
-            dataStream = QtCore.QDataStream(itemData, QtCore.QIODevice.ReadOnly)
+        pos = event.pos()
+        text = event.mimeData().text()
+        self.setText(text)
+        event.acceptProposedAction()
 
-            text = QtCore.QByteArray()
-            offset = QtCore.QPoint()
-            dataStream >> text >> offset
 
-            newLabel = MyLabel(self)
-            newLabel.setText(event.mimeData().text())
-            newLabel.move(event.pos() - offset)
-            newLabel.show()
+class Widget(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
 
-            if event.source() in self.children():
-                event.setDropAction(QtCore.Qt.MoveAction)
-                event.accept()
+    def initUI(self):
+        label = DropLabel("drop there",self)
+        label.setGeometry(190, 65, 100,100)
 
-            else:
-                event.acceptProposedAction()
+        label_to_drag = DraggableLabel("drag this",self)  
+        self.show()
 
-        else:
-            event.ignore()
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    w = Widget()
+    w.show()
+    sys.exit(app.exec_())

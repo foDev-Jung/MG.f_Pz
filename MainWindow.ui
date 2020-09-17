@@ -305,6 +305,438 @@
         <property name="midLineWidth">
          <number>2</number>
         </property>
+        <widget class="QLabel" name="storage_1">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_10">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>80</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_19">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>160</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_2">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>0</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_3">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>0</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_11">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>80</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_20">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>160</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_12">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>80</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_21">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>160</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_4">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>0</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_5">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>0</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_6">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>0</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_7">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>0</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_8">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>0</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_9">
+         <property name="geometry">
+          <rect>
+           <x>560</x>
+           <y>0</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_13">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>80</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_14">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>80</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_15">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>80</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_16">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>80</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_17">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>80</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_18">
+         <property name="geometry">
+          <rect>
+           <x>560</x>
+           <y>80</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_22">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>160</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_23">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>160</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_24">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>160</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_25">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>160</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_26">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>160</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="storage_27">
+         <property name="geometry">
+          <rect>
+           <x>560</x>
+           <y>160</y>
+           <width>71</width>
+           <height>74</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QPushButton" name="extract">
         <property name="geometry">
